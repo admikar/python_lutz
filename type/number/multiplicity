@@ -1,0 +1,42 @@
+it's new type collection
+
+>>> x = set(‘abcde’) >>> y = set(‘bdxyz’)
+
+
+>>> ‘e’ in x # Проверка вхождения в множество True
+>>> x – y set([‘a’,
+>>> x | y set([‘a’,
+>>> x & y set([‘b’,
+>>>x^y set([‘a’,
+# Разность множеств
+‘c’, ‘e’])
+# Объединение множеств
+‘c’, ‘b’, ‘e’, ‘d’, ‘y’, ‘x’, ‘z’])
+# Пересечение множеств
+‘d’])
+‘c’, ‘e’, ‘y’, ‘x’, ‘z’])
+# Симметрическая разность (XOR)
+>>> x > y, x < y # Надмножество, подмножество (False, False)
+
+
+>>> z = x.intersection(y) >>> z
+set([‘b’, ‘d’])
+>>> z.add(‘SPAM’)
+>>> z
+
+set([‘b’, ‘d’, ‘SPAM’])
+>>> z.update(set([‘X’, ‘Y’])) # Объединение множеств >>> z
+set([‘Y’, ‘X’, ‘b’, ‘d’, ‘SPAM’])
+>>> z.remove(‘b’) # Удалит один элемент >>> z
+set([‘Y’, ‘X’, ‘d’, ‘SPAM’])
+
+ = set([1, 2, 3])
+>>> S | set([3, 4]) # Операторы выражений требуют, set([1, 2, 3, 4]) # чтобы оба операнда были множествами >>> S | [3, 4]
+TypeError: unsupported operand type(s) for |: ‘set’ and ‘list’
+>>> S.union([3, 4])
+set([1, 2, 3, 4])
+>>> S.intersection((1, 3, 5)) set([1, 3])
+>>> S.issubset(range(-5, 5)) True
+
+
+
